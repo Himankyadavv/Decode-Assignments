@@ -1,0 +1,336 @@
+﻿C++ Assignments | Fundamentals of Programming -1 | Week2
+
+
+Q1. Take 2 integers input and print the greatest of them
+
+
+Ans . 
+#include<iostream>
+using namespace std;
+int main()
+{
+    cout<<"Enter the first number : ";
+    int a;
+    cin>>a;
+   
+    cout<<"Enter the second number : ";
+    int b;
+    cin>>b;
+
+
+    if(a>b)
+    {
+        cout<<"First number "<<a<<" is the greatest number.";
+    }
+    else
+    {
+        cout<<"Second number "<<b<<" is the greatest number.";
+    }
+    return 0;
+}
+
+
+
+
+Q2. Given the radius of the circle, predict whether numerically the area of this circle is larger than the circumference or not.
+
+
+Ans.
+#include <iostream>
+using namespace std;
+int main()
+{
+    cout << "Enter the radius of the circle : ";
+    int radius;
+    cin >> radius;
+
+
+    int area = 3.145 * radius * radius;
+    int circumference = 2 * 3.145 * radius;
+
+
+    if (area > circumference)
+    {
+        cout << "Area of the circle is greater than Circumference";
+    }
+
+
+    else
+    {
+        cout << "Area of the circle is not greater than Circumference";
+    }
+}
+
+
+
+
+Q3. Any year is input through the keyboard. Write a program to determine whether the year is a leap year or not. (Considering leap year occurs after every 4 years)
+
+
+Ans.
+#include<iostream>
+using namespace std;
+int main()
+{
+    cout<<"Enter the year : ";
+    int year;
+    cin>>year;
+   
+    if(year%4==0)
+    {
+        cout<<year<<" is the leap year.";
+    }
+   
+    else
+    {
+        cout<<year<<" is not a leap year.";
+    }
+}
+
+
+
+
+Q4. Given the length and breadth of a rectangle, write a program to find whether numerically the area of the rectangle is greater than its perimeter.
+
+
+Ans.
+#include <iostream>
+using namespace std;
+int main()
+{
+    cout<<"Enter the length of the rectangle : ";
+    int a;
+    cin>>a;
+
+
+    cout<<"Enter the breadth of the rectangle : ";
+    int b;
+    cin>>b;
+   
+    int area = a*b;
+    int perimeter = a + b;
+
+
+    if(area>perimeter)
+    {
+        cout<<"Area of rectangle is greater than Perimeter of the        rectangle.";
+    }
+   
+    else
+    {
+        cout<<"Area of rectangle is not greater than perimeter of the rectangle.";
+    }
+}
+
+
+
+
+Q5. Write a program to input sides of a triangle and check whether a triangle is equilateral, scalene or isosceles triangle.
+
+
+Ans.
+#include<iostream>
+using namespace std;
+int main()
+{
+    cout<<"Enter the sides of the triangle : "<<endl;
+    int a,b,c;
+    cout<<"First side : ";
+    cin>>a;
+    cout<<"Second side : ";
+    cin>>b;
+    cout<<"Third side : ";
+    cin>>c;
+
+
+    if(a==b && b==c && c==a)
+    {
+        cout<<"Triangle is a equilateral triangle";
+    }
+    else if(a==b || b==c || c==a)
+    {
+        cout<<"Triangle is isosceles triangle";
+    }
+    else
+    {
+        cout<<"Triangle is a scalene triangle";
+    }
+}
+
+
+
+
+Q6. If the marks of A, B and C are input through the keyboard, write a program to determine the student scoring the least marks.
+
+
+Ans.
+#include<iostream>
+using namespace std;
+int main()
+{
+    cout<<"Enter marks of student A : ";
+    int a;
+    cin>>a;
+   
+    cout<<"Enter marks of student B : ";
+    int b;
+    cin>>b;
+   
+    cout<<"Enter marks of student C : ";
+    int c;
+    cin>>c;
+
+
+    if(a<b)
+    {
+        if(a<c)
+        {
+            cout<<"Student A has least marks";
+        }
+        else
+        {
+            cout<<"Student C has least marks";
+        }
+    }
+
+
+    else
+    {
+        if(b<c)
+        {
+            cout<<"Student B has least marks";
+        }
+        else
+        {
+            cout<<"Student C has least marks";
+        }
+    }
+
+
+}
+
+
+
+
+Q7. Given a point (x, y), write a program to find out if it lies on the x-axis, y-axis or at the origin, viz. (0, 0).
+
+
+Ans.
+#include<iostream>
+using namespace std;
+int main()
+{
+    cout<<"Enter the x coordinate : ";
+    int x;
+    cin>>x;
+
+
+    cout<<"Enter the y coordinate : ";
+    int y;
+    cin>>y;
+ 
+    if(x==0 && y!=0)
+    {
+        cout<<"Point lies on the y axis";
+    }
+    else if(y==0 && x!=0)
+    {
+        cout<<"Point lies on the x axis";
+    }
+    else if(x==0 && y==0)
+    {
+        cout<<"point is origin";
+    }
+    else
+    {
+        cout<<"Point is in x-y plane";
+    }
+}
+
+
+
+
+Q8. Given three points (x1, y1), (x2, y2) and
+(x3, y3), write a program to check if all the three points fall on one straight line.
+Ans.
+#include<iostream>
+using namespace std;
+int main()
+{   int x1,y1;
+    cout<<"Enter the first coordinate A:"<<endl;
+    cin>>x1>>y1;
+
+
+    int x2,y2;
+    cout<<"Enter the second coordinate B:"<<endl;
+    cin>>x2>>y2;
+
+
+    int x3,y3;
+    cout<<"Enter the third coordinate C:"<<endl;
+    cin>>x3>>y3;
+
+
+   float slope1 = (y2 - y1)/(x2 - x1);
+   float slope2 = (y3 - y2)/(x3 - x2);
+
+
+   if(slope1==slope2)
+   {
+    cout<<"All points are in a straight line";
+   }
+   else
+   {
+    cout<<"All points are not in a straight line";
+   }
+}
+Q9. Write a C++ program to input any character and check whether it is the alphabet, digit or special character.
+Ans.
+#include<iostream>
+using namespace std;
+int main()
+{
+    char ch;
+    cout<<"Enter the character : ";
+    cin>>ch;
+
+
+    int ascii = (int)ch;
+
+
+    if(ascii>=65 && ascii<=90 || ascii>=97 && ascii<=122)
+    {
+        cout<<"Character is an alphabet";
+    }
+    else if(ascii>=48 && ascii<=57)
+    {
+        cout<<"Character is a digit";
+    }
+    else
+    {
+        cout<<"Character is a special character";
+    }
+
+
+}
+
+
+Q10. Predict the output of the below code:
+#include<iostream>
+
+
+using namespace std;
+
+
+int main() {
+    int a = 500, b, c;
+    if (a >= 400)
+        b = 300;
+    c = 200;
+    cout << "value of b and c are respectively " << b << " and " << c;
+    return 0;
+}
+
+
+Ans. The output of the below code is : 
+Value of b and c are respectively 300 and 200
